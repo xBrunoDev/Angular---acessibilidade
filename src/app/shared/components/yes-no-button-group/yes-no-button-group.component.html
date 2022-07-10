@@ -1,8 +1,8 @@
 <div
   role="radiogroup"
-  aria-labelleadby="label"
+  [attr.aria-labelleadby]="id"
   class="button-group">
-  <label id="label" class="label" >{{ label }}</label>
+  <label [attr.id]="id" class="label" >{{ label }}</label>
   <button
     role="radio"
     [attr.aria-checked]="value === options.YES"
