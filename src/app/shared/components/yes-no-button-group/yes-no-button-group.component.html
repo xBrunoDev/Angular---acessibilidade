@@ -1,10 +1,13 @@
 <div
+  appKm
   role="radiogroup"
   [attr.aria-labelleadby]="id"
   class="button-group">
   <label [attr.id]="id" class="label" >{{ label }}</label>
   <button
+    appKmItem
     role="radio"
+    [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
     [attr.aria-checked]="value === options.YES"
     type="button"
     class="button button-yes"
@@ -13,8 +16,10 @@
     Yes
   </button>
   <button
+    appKmItem
     type="button"
     [attr.aria-checked]="value === options.NO"
+    [attr.tabindex]="value === options.NO || value === null ? 0 : -1"
     class="button button-no"
     [class.button-pressed]="value === options.NO"
     (click)="activate(options.NO)">
