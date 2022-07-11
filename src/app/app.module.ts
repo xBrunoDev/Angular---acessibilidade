@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { YesNoButtonGroupModule } from './shared/components/yes-no-button-group/yes-no-button-group.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { KeyboardManagerModule } from './shared/directives/keyboard-manager/keyboard-manager.module';
+import { DisableControlModule } from './shared/directives/disable-control/disable-control.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { KeyboardManagerModule } from './shared/directives/keyboard-manager/keyb
     YesNoButtonGroupModule,
     ReactiveFormsModule,
     FormsModule,
-    KeyboardManagerModule
+    KeyboardManagerModule,
+    DisableControlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
