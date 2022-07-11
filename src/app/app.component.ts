@@ -8,14 +8,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AppComponent {
   title = 'a11y-p1';
-  public yesNoAnswer = null;
   public form: FormGroup = null;
 
   constructor(formBuilder: FormBuilder) {
     this.form = formBuilder.group({
       yesNoAnswer: [{
         value: 'no',
-        disabled: true
+        disabled: false
       }]
     });
 
